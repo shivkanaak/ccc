@@ -1,0 +1,67 @@
+#include<iostream.h>
+#include<string.h>
+#include<conio.h>
+
+class detail
+{
+    char fname[10];
+    char mname[10];
+    char lname[10];
+public:
+    detail();
+    detail(char *fn);
+    detail(char *fn,char *mn);
+    detail(char*fn,char *mn,char *ln);
+    void show();
+};
+detail::detail()
+{
+   fname[0]=mname[0]=lname[0]='\0';
+}
+detail::detail(char * fn)
+{
+strcpy(fname,fn);
+}
+
+detail::detail(char * fn, char *mn)
+{
+strcpy(fname,fn);
+strcpy(mname,mn);
+
+}
+detail::detail(char * fn,char * mn ,char *ln)
+{
+strcpy(fname,fn);
+strcpy(mname,mn);
+strcpy(lname,ln);
+
+}
+void detail::show()
+{
+cout<<fname;
+if(mname[0])
+{
+cout<<mname;
+}
+if(lname[0])
+{
+cout<<lname;
+}
+
+}
+
+
+void main()
+{
+clrscr();
+
+detail d2("asdfghj");
+detail d3("hff","fgdf");
+detail d4("dfgf","yd","fjhg");
+d2.show();
+//d3.show();
+//d4.show();
+
+
+
+}
